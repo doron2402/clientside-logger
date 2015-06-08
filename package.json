@@ -1,0 +1,28 @@
+{
+  "name": "clientside-logger",
+  "version": "1.0.0",
+  "description": "1. RUN COUCH DB   1. docker pull klaemo/couchdb:latest   2. # expose it to the world on port 5984[sudo] docker run -d -p 5984:5984 --name couchdb klaemo/couchdb   3. curl http://localhost:5984",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doron2402/clientside-logger.git"
+  },
+  "author": "Doron Segal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doron2402/clientside-logger/issues"
+  },
+  "homepage": "https://github.com/doron2402/clientside-logger",
+  "keywords": [
+    "express",
+    "api",
+    "Doron",
+    "Segal",
+    "couchdb",
+    "Couch"
+  ]
+}
