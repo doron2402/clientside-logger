@@ -11,9 +11,6 @@ module.exports = extend(true, {}, base, {
   discovery: {
     shouldPublish: false
   },
-  userService: {
-    url: 'http://user-eu-ci.otenv.com/user/'
-  },
   logger: {
     initTimeout: 10000
   },

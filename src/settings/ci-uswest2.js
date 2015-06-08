@@ -8,7 +8,7 @@ module.exports = extend(true, {}, base, {
     service: 'discovery-ci-uswest2.otenv.com',
   },
   logger: {
-      console: false
+      console: true
   },
   env: 'ci-uswest2'
 });

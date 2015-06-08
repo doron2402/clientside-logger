@@ -7,14 +7,8 @@ module.exports = extend(true, {}, base, {
   discovery: {
     service: 'discovery-pp-uswest2.otenv.com'
   },
-  restaurant: {
-    url: 'http://restaurant-pp.otenv.com/'
-  },
-  srs: {
-    url: 'http://srs-pp.otenv.com/v1/'
-  },
   logger: {
-      console: false
+    console: true
   },
   env: 'pp-uswest2'
 });
