@@ -1,0 +1,12 @@
+{
+  "requestId": "pp-request-bookings",
+  "resources": {
+    "cpus": 0.1,
+    "memoryMb": 512,
+    "numPorts": 1
+  },
+  "healthcheckUri": "/health",
+  "env": {
+    "NODE_ENV": "pp-uswest2"
+  }
+}
