@@ -5,7 +5,7 @@ if (!global.__BASE) {
 }
 
 var express = require('express');
-var config = require(__BASE + 'config');
+var config = require(__BASE + '/config');
 var app = express();
 var mw = require(__BASE + '/mw');
 var routes = require(__base + '/routes');

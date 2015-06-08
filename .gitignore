@@ -1,3 +1,4 @@
 node_modules
 config/
 src/settings/
+npm-debug.log
