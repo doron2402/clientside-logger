@@ -27,6 +27,7 @@
   ],
   "dependencies": {
     "express": "^4.12.4",
+    "extend": "^2.0.1",
     "ot-logger": "^0.2.1"
   }
 }
