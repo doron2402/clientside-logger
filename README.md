@@ -1,4 +1,6 @@
 # Client Side logger
+** Important **
+-  `docker rm <name>`
 
 1. RUN COUCH DB
   1. docker pull klaemo/couchdb:latest
