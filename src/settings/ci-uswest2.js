@@ -6,6 +6,7 @@ var extend = require('extend'),
 module.exports = extend(true, {}, base, {
   discovery: {
     service: 'discovery-ci-uswest2.otenv.com',
+    shouldPublish: true
   },
   logger: {
       console: true

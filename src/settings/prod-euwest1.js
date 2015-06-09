@@ -5,12 +5,10 @@ var extend = require('extend'),
 
 module.exports = extend(true, {}, base, {
   discovery: {
-    service: 'discovery-prod-euwest1.otenv.com'
+    service: 'discovery-prod-euwest1.otenv.com',
+    shouldPublish: true
   },
   logger: {
-    redis: {
-      host: 'logging-prod-euwest1.otenv.com'
-    },
     console: true
   },
   env: 'prod-euwest1'

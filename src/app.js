@@ -6,33 +6,26 @@ if (!global.__BASE) {
 
 var express = require('express');
 var config = require(__BASE + '/config');
-var app = express();
 var mw = require(__BASE + '/mw');
-var routes = require(__base + '/routes');
-var DiscoveryClient = require(__base + '/agents/discovery');
+var routes = require(__BASE + '/routes');
+var logger = require(__BASE + '/agents/logger');
+var couch = require(__BASE + '/agents/couch');
+var DiscoveryClient = require(__BASE + '/agents/discovery');
+
+var app = express();
+var discovery = new DiscoveryClient();
 
 app.set('host', config.host).set('port', config.port).set('env', process.env.NODE_ENV || 'development');
 
 app
   .use(routes)
-  .use(middleware.errorHandler);
+  .use(mw.errorHandler)
+  .listen(app.get('port'), function () {
+    logger.info('Starting App: ' + app.get('host') + ':' + app.get('port') + ' Env: ' + app.get('env'));
+    discovery.BeginPublishing();
+});
 
-logger.init(function () {
-  salesforce
-    .authenticate()
-    .then(function () {
-      app
-        .listen(app.get('port'), function () {
-          logger.log({
-            message: 'App Started',
-            logname: 'start',
-            host: app.get('host'),
-            port: app.get('port'),
-            env: app.get('env')
-          });
-
-          var discovery = new DiscoveryClient();
-          discovery.BeginPublishing();
-        });
-    });
+process.on('exit', function () {
+  console.log('About to exit.');
+  discovery.Unannounce();
 });

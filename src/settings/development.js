@@ -14,5 +14,10 @@ module.exports = extend(true, {}, base, {
   logger: {
     initTimeout: 10000
   },
-  env: 'development'
+  env: 'development',
+  couchdb: {
+    host: 'localhost',
+    port: 5984,
+    db: 'logs'
+  }
 });
